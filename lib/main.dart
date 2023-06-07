@@ -79,11 +79,38 @@ class _QuizPageState extends State<QuizPage> {
        fontSize: 25.0,
       color: Colors.white,
                 ),),),), ),
-  
-  
-  
-  
-  
-  
-  
+ 
+ 
+        Expanded(
+      child: Padding(
+      padding: EdgeInsets.all(15.0),
+      child: FlatButton(
+        textColor: Colors.white,
+         color: Colors.green,
+         child: Text(
+       'True',
+       style: TextStyle(
+         color: Colors.white,
+        fontSize: 20.0,
+                ),),
+              onPressed: () {
+              checkAnswer(true);
+              },),),),
+        Expanded(
+          child: Padding(
+            padding: EdgeInsets.all(15.0),
+            child: FlatButton(
+         color: Colors.red,
+        child: Text(
+      'False',
+      style: TextStyle(
+      fontSize: 20.0,
+      color: Colors.white,
+                ),),
+       onPressed: () {
+      checkAnswer(false);
+              },),),),
+     Row(
+    children: scoreKeeper,
+    )],);
   }}
